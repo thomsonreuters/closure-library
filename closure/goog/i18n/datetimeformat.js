@@ -306,7 +306,7 @@ goog.i18n.DateTimeFormat.localizeNumbers =
     function(input, opt_dateTimeSymbols) {
   input = String(input);
   var dateTimeSymbols = opt_dateTimeSymbols || goog.i18n.DateTimeSymbols;
-  if (dateTimeSymbols.ZERODIGIT === undefined) {
+  if (dateTimeSymbols['ZERODIGIT'] === undefined) {
     return input;
   }
 
@@ -314,7 +314,7 @@ goog.i18n.DateTimeFormat.localizeNumbers =
   for (var i = 0; i < input.length; i++) {
     var c = input.charCodeAt(i);
     parts.push((0x30 <= c && c <= 0x39) ? // '0' <= c <= '9'
-        String.fromCharCode(dateTimeSymbols.ZERODIGIT + c - 0x30) :
+        String.fromCharCode(dateTimeSymbols['ZERODIGIT'] + c - 0x30) :
         input.charAt(i));
   }
   return parts.join('');
