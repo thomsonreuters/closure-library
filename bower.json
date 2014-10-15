@@ -1,0 +1,11 @@
+{
+  "name": "closure-library",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "/*.*",
+    "/closure/bin",
+    "/closure/css",
+    "/closure/known_issues"
+  ]
+}
